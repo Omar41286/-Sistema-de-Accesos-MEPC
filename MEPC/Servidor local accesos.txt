@@ -1,0 +1,6 @@
+URL = http://localhost/proyecto_ing/proyecto_ing_software/Index.html
+Id usuario = 1 (administrador)
+contraseña = pass1234
+
+Id usuario = 3 (usuario)
+contraseña = pass9123

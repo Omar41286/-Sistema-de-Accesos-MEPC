@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MEPC - Sistema de Almacén</title>
+    <style>
+        :root {
+            --mepc-red: #E85A4F;
+            --mepc-navy: #0A192F;
+            --mepc-light: #f8f9fa;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: var(--mepc-navy);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(-45deg, #0A192F, #1A2942, #2A3955, #3A4968);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+        }
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        .login-container {
+            background-color: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 2rem;
+            width: 100%;
+            max-width: 400px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+        .logo {
+            display: block;
+            margin: 0 auto 2rem;
+            max-width: 200px;
+            height: auto;
+        }
+        h1 {
+            color: var(--mepc-navy);
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        .form-group {
+            margin-bottom: 1rem;
+        }
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--mepc-navy);
+        }
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 0.75rem;
+            border: 2px solid #e9ecef;
+            border-radius: 10px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+        input[type="text"]:focus,
+        input[type="password"]:focus {
+            outline: none;
+            border-color: var(--mepc-red);
+        }
+        button {
+            width: 100%;
+            padding: 0.75rem;
+            background-color: var(--mepc-red);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+        button:hover {
+            background-color: #d04940;
+            transform: translateY(-2px);
+        }
+        .footer {
+            text-align: center;
+            margin-top: 2rem;
+            color: var(--mepc-navy);
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/MEPC-p8blHEpOjVDEGO1e1ZPx1nae2RpJq6.png" alt="MEPC Logo" class="logo">
+        <h1>Acceso al Sistema</h1>
+        <form action="validar_login.php" method="POST">
+            <div class="form-group">
+                <label for="id_usuario">ID Usuario</label>
+                <input type="text" id="id_usuario" name="id_usuario" required placeholder="Ingrese su ID">
+            </div>
+            <div class="form-group">
+                <label for="contrasena">Contraseña</label>
+                <input type="password" id="contrasena" name="contrasena" required placeholder="Ingrese su contraseña">
+            </div>
+            <button type="submit">Iniciar Sesión</button>
+        </form>
+        <div class="footer">
+            MEPC Engineering Mexicana S.A. DE C.V.
+        </div>
+    </div>
+</body>
+</html>
